@@ -6,11 +6,11 @@
     min-width: 0;
     scrollbar-gutter: none;
     scrollbar-darkshadow-color: transparent;
+    overflow-x: hidden;
 }
 
 body {
     font-family: Outfit;
-    overflow-x: hidden;
 }
 
 nav {
