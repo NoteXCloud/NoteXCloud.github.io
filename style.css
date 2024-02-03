@@ -40,13 +40,9 @@ h3 {
 }
 
 #sec1 {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+ 
     height: 100vh;
-    background-size: cover;
-    background-position: center;
+
 }
 
 #cta-button {
@@ -225,11 +221,16 @@ h3 {
     }
 
     #sec1 {
-        background-image: url('images/backgrounds/home-bg1-landscape-large.png');
-        background-size: cover;
-        background-position-x: left;
-        align-items: start;
-        padding-left: 15vw;
+        width: 100vw;
+        position: relative;
+    }
+    #sec1 img {
+        position: absolute;
+        height: 100vh;
+        object-fit: cover;
+        right: 0;
+        width: 102%;
+        object-position: 0%;
     }
     .hero {
         display: flex;
@@ -237,13 +238,18 @@ h3 {
         justify-content: center;
         height: 100%;
         max-width: 35%;
+        padding-left: 10%;
         padding-right: 100px;
         position: relative;
+    }
+    .hero-h2 {
+        position: absolute;
+        bottom: 100px;
+        left: 10%;
     }
     #sec1 h1 {
         font-size: 6vh;
         text-align: left;
-    
     }
     #sec1  h3 {
         font-size: 3vh;
