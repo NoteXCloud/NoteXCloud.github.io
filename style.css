@@ -6,11 +6,17 @@
     min-width: 0;
     scrollbar-gutter: none;
     scrollbar-darkshadow-color: transparent;
-    overflow-x: hidden;
+
 }
 
 body {
     font-family: Outfit;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+.menu-item li {
+    list-style: none;
 }
 
 nav {
@@ -43,31 +49,6 @@ h3 {
     background-position: center;
 }
 
-#sec1 h1 {
-    margin-top: 20vh;
-    font-size: 2.5vh;
-    max-height: 6em;
-    line-height: 1.6em;
-    width: 10em;
-}
-
-#sec1 h2 {
-    text-align: left;
-    width: 80vw;
-    font-size: 1.7vh;
-    font-weight: 700;
-    line-height: 37px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    margin-bottom: 10vh;
-}
-
-#sec1 h3 {
-    margin-top: 30vh;
-    font-size: 1.5vh;
-    width: 20em;
-}
-
 #cta-button {
     padding: 0;
     min-width: 250px;
@@ -75,6 +56,7 @@ h3 {
     font: inherit;
     color: inherit;
     cursor: pointer;
+    width: fit-content;
     color: white;
     background-color: hsla(0, 87%, 42%, 1);
     text-decoration: none;
@@ -249,31 +231,35 @@ h3 {
         align-items: start;
         padding-left: 15vw;
     }
-
+    .hero {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+        max-width: 35%;
+        padding-right: 100px;
+        position: relative;
+    }
     #sec1 h1 {
         font-size: 6vh;
         text-align: left;
+    
+    }
+    #sec1  h3 {
+        font-size: 3vh;
+        width: fit-content;
+        margin-bottom: 4vh;
+       
+    }
+    .hero > *{
+        margin-bottom: 3vh;
     }
 
-    #sec1 h2 {
-        text-align: left;
-    }
-
-    #sec1 h3 {
-        margin-top: -15vh;
-        font-size: 1.8vh;
-        text-align: left;
-    }
-
-    #sec1 button {
-        margin-top: -4vh;
-        margin-left: 5vw;
-    }
 
     #sec2 {
         background-image: url('images/backgrounds/home-bg2-landscape-large.png');
         background-size: cover;
-        height: 500vh;
+        height: 600vh;
     }
 
     nav#portrait {
@@ -287,17 +273,15 @@ h3 {
     #content2 {
         width: 37.5%;
         margin-left: 45%;
-        margin-top: 5vh;
-        height: 110vh;
         display: flex;
         flex-direction: column;
         align-items: left;
         text-align: left;
-        padding: 5%;
+        padding: 200px 0 100px;
+        min-height: 100vh;
     }
 
     #content2 h2 {
-        margin-top: 10vh;
         font-size: 1.8vh;
         font-weight: 700;
         text-align: left;
@@ -307,7 +291,6 @@ h3 {
     }
 
     #content2 h1 {
-        margin-top: 2vh;
         font-size: 5vh;
         text-align: left;
         overflow: visible;
@@ -327,14 +310,10 @@ h3 {
         overflow: visible;
     }
 
-    #extra-text {
-        margin-top: 4vh;
-    }
+ 
 
     #benefits-panel {
-        margin-top: 35vh;
         overflow: visible;
-        height: 110vh;
         width: 80%;
         border-radius: 50px;
         border: 1px solid rgba(255, 255, 255, 0.5);
@@ -343,6 +322,8 @@ h3 {
         box-shadow: 5px 11px 10px rgba(0, 0, 0, 0.2);
         display: flex;
         flex-direction: column;
+        padding: 50px 0;
+        margin: 50px 0;
     }
 
     #benefit {
@@ -351,16 +332,12 @@ h3 {
         display: flex;
         flex-direction: column;
         align-items: center;
-        height: 30vh;
+gap: 10px;
         border: 1px solid rgba(255, 255, 255, 0.5);
         justify-content: space-between;
         background: rgba(174, 174, 174, 0.25);
+        padding: 20px;
     }
-
-    #benefit h2 {
-        margin-top: 3vh;
-    }
-
     #benefit p {
         margin-bottom: 3vh;
         width: 50%;
@@ -368,20 +345,26 @@ h3 {
 
     #benefits {
         width: 100%;
-        margin-top: 8%;
+        padding: 25px 0 50px;
         display: flex;
         justify-content: space-evenly;
         text-align: center;
     }
-
+    #benefits img {
+        max-height: 50px;
+    }
+    #benefits svg {
+        max-height: 30px;
+    }
     #benefits-panel h1 {
-        margin-top: 6%;
+        margin-top: 25px;
         font-size: 5vh;
+        margin-bottom: 25px;
     }
 
     #content3 {
-        margin-top: 20vh;
-        height: 90vh;
+        padding: 100px 0;
+        margin: 50px 0;
     }
 
     #content3 h1 {
@@ -411,9 +394,10 @@ h3 {
     }
 
     #content4 {
-        margin-top: 20vh;
-        height: 110vh;
+        height: fit-content;
         width: 80%;
+        margin: 100px auto;
+        padding: 50px 0;
         border-radius: 50px;
         border: 1px solid rgba(255, 255, 255, 0.5);
         background: rgba(255, 255, 255, 0.5);
@@ -422,14 +406,12 @@ h3 {
         display: flex;
         flex-direction: column;
     }
-
     #content4 h1 {
         font-size: 4vh;
-        margin-top: 15vh;
+        padding: 25px 0 0;
     }
-
     #features {
-        margin-top: 15vh;
+       padding: 50px 0;
         display: flex;
         justify-content: space-evenly;
     }
@@ -447,11 +429,11 @@ h3 {
         flex-direction: column;
         width: 100%;
         align-items: center;
-        height: 100vh;
+       
+        padding: 100px 0;
     }
 
     #content5 h1 {
-        padding-top: 20vh;
         font-size: 4vh;
     }
 
@@ -476,25 +458,28 @@ h3 {
     }
 
     #cta-banner {
-        margin-top: 15vh;
+      
         display: flex;
         width: 100%;
         flex-direction: column;
         align-items: center;
         justify-content: space-evenly;
-        height: 40vh;
+    margin: 50px 0;
+    padding: 50px 0;
         background-color: rgba(255, 255, 255, 1);
         box-shadow: 5px 11px 10px rgba(0, 0, 0, 0.5);
     }
 
     #cta-banner h1 {
         font-size: 4vh;
+        margin-bottom: 25px;
     }
 
     #big-text {
-        height: 60vh;
+   
         font-size: 30vh;
         color: #5c5c5c;
+        padding: 50px 0;
         mix-blend-mode: screen;
     }
 
